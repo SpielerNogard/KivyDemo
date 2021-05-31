@@ -1,0 +1,31 @@
+<Login>
+    benutzername: Benutzername.text
+    pw: passwort.text
+    knopf: btn
+    GridLayout:
+        cols:1
+        size:root.width, root.height
+        GridLayout:
+            cols: 2
+            Label: 
+                text: "Benutzername"
+                font_size: 30
+            TextInput:
+                id: Benutzername
+                multiline: False
+                font_size: 30
+            Label:
+                text: "Password"
+                font_size: 30
+            TextInput:
+                id: passwort
+                password: True
+                multiline: False
+                font_size: 30
+        Button:
+            text: "Anmelden"
+            id: btn
+            size_hint: (1.,0.5)
+            font_size: 30
+            on_release: 
+                root.loginwithpopup()
